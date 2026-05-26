@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body style="font-family: Arial; text-align:center; margin-top:100px;">
+
+    <h1>Grade Calculator</h1>
+
+    <input type="number" id="marks" placeholder="Enter Percentage">
+    
+    <button onclick="checkGrade()">Check Grade</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+
+        function checkGrade() {
+
+            let percentage = document.getElementById("marks").value;
+
+            let grade = "";
+
+            if (percentage >= 90) {
+                grade = "A+";
+            }
+            else if (percentage >= 80) {
+                grade = "A";
+            }
+            else if (percentage >= 70) {
+                grade = "B";
+            }
+            else if (percentage >= 60) {
+                grade = "C";
+            }
+            else if (percentage >= 50) {
+                grade = "D";
+            }
+            else {
+                grade = "Fail";
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your Grade is: " + grade;
+        }
+
+    </script>
+
+</body>
+</html>
